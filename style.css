@@ -16,7 +16,7 @@ article, header, nav, section {
 
 .wrap{
   margin: 60px auto;
-  max-width: 1200px;
+  max-width: 950px;
   overflow: hidden;
   width: 90%;
 }
