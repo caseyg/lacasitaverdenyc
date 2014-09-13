@@ -32,11 +32,25 @@ a:hover {
   color:#000;
 }
 
+
 /* Header */
 
 .primary-header{
   font-size: 0.85em;
+  border-top:5px solid #000;
 }
+
+.primary-header h1, .primary-header p {
+    display:inline-block;
+    vertical-align: top;
+}
+
+.primary-header h1 a {
+  color:#000;
+  text-decoration:none;
+  margin-right:1em;
+}
+
 
 .primary-header img {
   background:darkgreen;
