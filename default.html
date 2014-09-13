@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{site.title}} | {{title}}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header class="primary-header">
+      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+      <p>{{site.meta['tagline']}}</p>
+      {% if type == "page" %}<img height="425" width="950" src="{{assets.first.url | fallback: '/assets/cropped-bag2.jpg'}}">{% endif %}
+      <ul class="page-menu">
+      {% for page in site.pages %}
+        <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+      {% endfor %}
+      </ul>
+    </header>
+
+    <section class="content">
+
+      {% if type == "post" %}<h1 class="content-title">{{title}}</h1>{% endif %}
+
+      {% if pages %}
+        {% comment %} Show subpages if there are any available {% endcomment %}
+        <nav class="subpage-menu">
+          {% for subpage in pages %}
+            <a href="{{subpage.url}}">
+            {% if subpage.assets.size > 0 %}<img src="{{subpage.assets.first.url}}">{% endif %}
+            {{subpage.title}}
+            </a>
+          {% endfor %}
+        </nav>
+      {% endif %}
+
+      {% if parent %}
+        <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+      {% endif %}
+
+      {{body}}
+      
+
+      {% if parent.title == "Art" %}
+      <section class="image-grid">
+        {% for asset in assets %}
+          {% if asset.type == 'image' %}
+            <a href="{{asset.url}}"><img src="{{asset.url}}"></a>  
+          {% endif %}
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if type == "page" %}
+        {% comment %} Loop through any posts and show an excerpt {% endcomment %}
+        {% for post in posts %}
+          <article class="post-preview">
+            <h2>
+            {% if post.assets.size > 0 %}<img src="{{post.assets.first.url}}">{% endif %}
+              {% if post.parent.title == "News + Events" %}{{post.date | date: "%b %d, %Y"}}<br>{% endif %}
+              <a href="{{post.url}}">
+              {{post.title}}
+            </a></h2>
+            {{post.body | strip_html | truncatewords: 100}}
+            <p><a href="{{post.url}}">View post</a>
+          </article>
+        {% endfor %}
+
+      {% endif %}
+    </section><!-- /content -->
+  </div><!-- /wrap -->
+</body>
+</html>
