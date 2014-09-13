@@ -28,6 +28,10 @@ a{
   color: darkgreen;
 }
 
+a:hover {
+  color:#000;
+}
+
 /* Header */
 
 .primary-header{
@@ -86,8 +90,8 @@ a{
 
 .post-preview img {
   max-width:300px;
-  float:left;
-  margin: 0 1em .5em 0;
+  float:right;
+  margin: 0 0 .5em 1em;
 }
 
 .subpage-menu a{
