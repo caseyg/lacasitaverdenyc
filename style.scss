@@ -1,0 +1,138 @@
+// CURSOR
+
+// * {
+// 	cursor: none;
+// }
+
+figure#mouse-pointer {
+	background-image: url('hand.gif');
+	width: 149px;
+	height: 118px;
+	position: absolute;
+		top:0;
+		left:0;
+	display: block;
+	user-select:none;
+}
+
+body {
+	background:#c6da4b url("compost.png") no-repeat bottom left;
+	background-size:100%;
+	font-family: "tablet-gothic-wide";
+	margin:0;
+	min-height:100vh;
+}
+
+
+// TYPE
+
+h1 {
+	font-weight: 900;
+	font-size:15vw;
+	line-height:.85em;
+	color:#222;
+	margin:0 0 20px 0;
+	padding:0;
+	}
+
+h2 {
+	font-weight:400;
+	text-transform: uppercase;
+	letter-spacing:2px;
+}
+
+img {
+	max-width:50%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	}
+
+span {
+	font-weight:100 !important;
+	font-size:16px !important; 
+	color:gray !important;
+	text-transform: uppercase;
+	letter-spacing:2px;
+}
+
+div {
+	padding:10px;
+	margin:10px;
+	background:#eee;
+	width:40%;
+	float:right;
+}
+
+// COLOR
+
+$spring: green;
+$winter: teal;
+
+$fall: mix($spring, $winter);
+
+.spring {color:$spring}
+.fall {color:$fall}
+.winter {color:darken($winter, 10%)}
+.summer {color:lighten($spring, 20%)}
+
+// LAYOUT
+
+img {
+	width:50vw;
+	max-width:800px;
+}
+
+// ABOUT
+
+$home:				rgb(200,200,200);
+$about:				rgb(0,0,0);
+$history:			rgb(255,0,0);
+$people:			rgb(213,111,0);
+$thanks:			rgb(0,100,0);
+$membership:		rgb(123,0,124);
+$how-to-join:		rgb(123,224,61);
+$rules-regulations:	rgb(100,100,100);
+$squads:			rgb(0,0,255);
+$art:				rgb(0,255,0);
+$news:				rgb(1,50,24);
+
+$text-shade:		25%;
+
+body#about {
+	ul, li {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	h1, li a:link, li a:visited {
+		text-decoration: none;
+		font-size:9vw;
+		font-family:"tablet-gothic-wide";
+		font-weight:800;
+		display:block;
+		margin:0;
+		padding:.15em 0 0 0;
+		line-height:.85em;
+		overflow:hidden;
+		-webkit-transition:all .25s;
+	}
+	h1:hover, li a:hover, li a:active {
+		background-color:rgba(0,0,0,0)!important;
+		color:#fff;
+		padding-bottom:1em;
+		box-shadow:0 -20px 10px rgba(0,0,0,.5);
+		z-index:5;
+	}
+	.home {background-color:rgba($home,.5);color:darken($home, $text-shade);}
+	.about {background-color:rgba($about,.5);color:darken($about, $text-shade);}
+	.history {background-color:rgba($history,.5);color:darken($history, $text-shade);}
+	.people {background-color:rgba($people,.5);color:darken($people, $text-shade);}
+	.thanks {background-color:rgba($thanks,.5);color:darken($thanks, $text-shade);}
+	.membership {background-color:rgba($membership,.5);color:darken($membership, $text-shade);}
+	.how-to-join {background-color:rgba($how-to-join,.5);color:darken($how-to-join, $text-shade);}
+	.rules-regulations {background-color:rgba($rules-regulations,.5);color:darken($rules-regulations, $text-shade);}
+	.squads {background-color:rgba($squads,.5);color:darken($squads, $text-shade);}
+	.art {background-color:rgba($art,.5);color:darken($art, $text-shade);}
+	.news {background-color:rgba($news,.5);color:darken($news, $text-shade);}
+}
