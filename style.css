@@ -1,4 +1,5 @@
-figure#mouse-pointer {
+3
+figure  #mouse-pointer {
   background-image: url("hand.gif");
   width: 149px;
   height: 118px;
@@ -9,18 +10,47 @@ figure#mouse-pointer {
   user-select: none; }
 
 body {
-  background: #c6da4b url("compost.png") no-repeat bottom left;
   background-size: 100%;
   font-family: "tablet-gothic-wide";
   margin: 0;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-size: 18px; }
+
+body#about {
+  background: #c6da4b url("compost.png") no-repeat bottom left; }
+
+#content {
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+  margin-top: -.25em;
+  overflow: hidden; }
+
+section.photo {
+  min-height: 500px;
+  background-size: cover; }
+
+#content article {
+  max-width: 800px;
+  margin: auto; }
+
+header a {
+  font-size: 38px;
+  font-weight: 900;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.55);
+  display: block;
+  padding-top: 18px !important;
+  line-height: 42px;
+  max-width: 800px;
+  margin: auto; }
 
 h1 {
   font-weight: 900;
-  font-size: 15vw;
-  line-height: .85em;
-  color: #222;
-  margin: 0 0 20px 0;
+  font-size: 125px;
+  line-height: 115px;
+  max-width: 100%;
+  color: #fff;
+  max-width: 800px;
+  margin: auto;
   padding: 0; }
 
 h2 {
@@ -75,7 +105,7 @@ body#about h1, body#about li a:link, body#about li a:visited {
   font-weight: 800;
   display: block;
   margin: 0;
-  padding: .15em 0 0 0;
+  padding: .15em .15em 0 .15em;
   line-height: .85em;
   overflow: hidden;
   -webkit-transition: all .25s; }
@@ -85,38 +115,47 @@ body#about h1:hover, body#about li a:hover, body#about li a:active {
   padding-bottom: 1em;
   box-shadow: 0 -20px 10px rgba(0, 0, 0, 0.5);
   z-index: 5; }
-body#about .home {
+
+.home {
   background-color: rgba(200, 200, 200, 0.5);
   color: #888888; }
-body#about .about {
+
+.about {
   background-color: rgba(0, 0, 0, 0.5);
   color: black; }
-body#about .history {
+
+.history {
   background-color: rgba(255, 0, 0, 0.5);
   color: maroon; }
-body#about .people {
+
+.people {
   background-color: rgba(213, 111, 0, 0.5);
   color: #562d00; }
-body#about .thanks {
+
+.thanks {
   background-color: rgba(0, 100, 0, 0.5);
   color: black; }
-body#about .membership {
+
+.membership {
   background-color: rgba(123, 0, 124, 0.5);
   color: black; }
-body#about .how-to-join {
+
+.how-to-join {
   background-color: rgba(123, 224, 61, 0.5);
   color: #418816; }
-body#about .rules-regulations {
+
+.rules-regulations {
   background-color: rgba(100, 100, 100, 0.5);
   color: #242424; }
-body#about .squads {
+
+.squads {
   background-color: rgba(0, 0, 255, 0.5);
   color: navy; }
-body#about .art {
+
+.art {
   background-color: rgba(0, 255, 0, 0.5);
   color: green; }
-body#about .news {
+
+.news {
   background-color: rgba(1, 50, 24, 0.5);
   color: black; }
-
-/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-// CURSOR
+3// CURSOR
 
 // * {
 // 	cursor: none;
@@ -16,22 +16,50 @@ figure#mouse-pointer {
 }
 
 body {
-	background:#c6da4b url("compost.png") no-repeat bottom left;
 	background-size:100%;
 	font-family: "tablet-gothic-wide";
 	margin:0;
 	min-height:100vh;
+	font-size:18px;
 }
 
+body#about {
+	background:#c6da4b url("compost.png") no-repeat bottom left;
+}
 
+#content {
+	box-shadow:0 -10px 10px rgba(0,0,0,.5);
+	margin-top:-.25em;
+	overflow:hidden;
+}
+section.photo {
+	min-height:500px;
+	background-size:cover;
+}
+#content article {
+	max-width:800px;
+	margin:auto;
+}
 // TYPE
-
+header a {
+	font-size: 38px;
+	font-weight:900;
+	text-decoration:none;
+	color:rgba(0,0,0,.55);
+	display:block;
+	padding-top:18px!important;
+	line-height:42px;
+	max-width:800px;
+	margin:auto;
+}
 h1 {
 	font-weight: 900;
-	font-size:15vw;
-	line-height:.85em;
-	color:#222;
-	margin:0 0 20px 0;
+	font-size:125px;
+	line-height:115px;
+	max-width:100%;
+	color:#fff;
+	max-width:800px;
+	margin:auto;
 	padding:0;
 	}
 
@@ -112,7 +140,7 @@ body#about {
 		font-weight:800;
 		display:block;
 		margin:0;
-		padding:.15em 0 0 0;
+		padding:.15em .15em 0 .15em;
 		line-height:.85em;
 		overflow:hidden;
 		-webkit-transition:all .25s;
@@ -124,15 +152,15 @@ body#about {
 		box-shadow:0 -20px 10px rgba(0,0,0,.5);
 		z-index:5;
 	}
-	.home {background-color:rgba($home,.5);color:darken($home, $text-shade);}
-	.about {background-color:rgba($about,.5);color:darken($about, $text-shade);}
-	.history {background-color:rgba($history,.5);color:darken($history, $text-shade);}
-	.people {background-color:rgba($people,.5);color:darken($people, $text-shade);}
-	.thanks {background-color:rgba($thanks,.5);color:darken($thanks, $text-shade);}
-	.membership {background-color:rgba($membership,.5);color:darken($membership, $text-shade);}
-	.how-to-join {background-color:rgba($how-to-join,.5);color:darken($how-to-join, $text-shade);}
-	.rules-regulations {background-color:rgba($rules-regulations,.5);color:darken($rules-regulations, $text-shade);}
-	.squads {background-color:rgba($squads,.5);color:darken($squads, $text-shade);}
-	.art {background-color:rgba($art,.5);color:darken($art, $text-shade);}
-	.news {background-color:rgba($news,.5);color:darken($news, $text-shade);}
 }
+.home {background-color:rgba($home,.5);color:darken($home, $text-shade);}
+.about {background-color:rgba($about,.5);color:darken($about, $text-shade);}
+.history {background-color:rgba($history,.5);color:darken($history, $text-shade);}
+.people {background-color:rgba($people,.5);color:darken($people, $text-shade);}
+.thanks {background-color:rgba($thanks,.5);color:darken($thanks, $text-shade);}
+.membership {background-color:rgba($membership,.5);color:darken($membership, $text-shade);}
+.how-to-join {background-color:rgba($how-to-join,.5);color:darken($how-to-join, $text-shade);}
+.rules-regulations {background-color:rgba($rules-regulations,.5);color:darken($rules-regulations, $text-shade);}
+.squads {background-color:rgba($squads,.5);color:darken($squads, $text-shade);}
+.art {background-color:rgba($art,.5);color:darken($art, $text-shade);}
+.news {background-color:rgba($news,.5);color:darken($news, $text-shade);}
